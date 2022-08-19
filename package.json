@@ -1,0 +1,20 @@
+{
+  "name": "iot-client-ui-minimal",
+  "version": "1.0.0",
+  "description": "Minimal User Interface used in IoT chips",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run postcss",
+    "tailwind": "npx tailwindcss -i ./src/styles/app.scss -o ./src/styles.css --watch",
+    "postcss": "postcss ./src/styles/app.scss -o ./src/styles.css --watch",
+    "test": "exit 0"
+  },
+  "author": "amirhossein.shakeri.work@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.4",
+    "tailwindcss": "^3.1.8"
+  }
+}
