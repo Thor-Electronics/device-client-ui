@@ -7,6 +7,7 @@
     "dev": "npm run postcss",
     "tailwind": "npx tailwindcss -i ./src/styles/app.scss -o ./src/styles.css --watch",
     "postcss": "postcss ./src/styles/app.scss -o ./src/styles.css --watch",
+    "build": "npx tailwindcss -i ./src/styles/app.scss -o ./build/styles.css --minify",
     "test": "exit 0"
   },
   "author": "amirhossein.shakeri.work@gmail.com",
