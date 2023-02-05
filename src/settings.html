@@ -15,7 +15,13 @@
         class="Settings p-3 bg-white shadow-lg flex flex-col gap-4 rounded-lg"
       >
         <h1 class="title text-center text-3xl font-bold">Settings</h1>
-        <form class="flex flex-col gap-3">
+        <form class="flex flex-col gap-3" method="post">
+          <div
+            class="errors bg-rose-100 rounded-lg py-2 px-3 shadow-md shadow-rose-50 text-rose-700 font-medium flex flex-col gap-2"
+          >
+            <p class="error">Email not found</p>
+            <p class="error">Invalid credentials</p>
+          </div>
           <div class="row">
             <label>
               WiFi SSID:
