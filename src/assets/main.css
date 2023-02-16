@@ -1,35 +1,48 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  @apply bg-slate-200 min-h-screen;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.header {
+  @apply flex items-center justify-center flex-col p-2 gap-2;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+nav.navbar {
+  @apply flex gap-2 items-center justify-center bg-white p-2
+  rounded-xl w-full shadow;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+nav.navbar .nav-item {
+  @apply bg-sky-100 p-2 rounded-lg flex-grow text-center
+  text-blue-500 hover:bg-blue-500 hover:text-white
+  transition-all shadow-inner hover:shadow-md;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.home {
+  @apply p-2 h-full;
+}
+
+.settings {
+  @apply flex items-center justify-center flex-col gap-4;
+}
+
+.btn {
+  @apply py-1 px-3 rounded-lg shadow-md text-white;
+}
+
+label.row {
+  @apply block;
+}
+
+label.row input {
+  @apply mt-1;
+}
+
+select,
+textarea,
+input {
+  @apply w-full bg-slate-200 rounded-lg py-1 px-2 shadow;
 }
