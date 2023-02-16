@@ -60,7 +60,7 @@
 <style scoped>
 .buttons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 0.5rem;
 }
 </style>
