@@ -8,8 +8,8 @@ jobs:
   build:
     name: Publish Vue App
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+#     permissions:
+#       contents: write
 #       releases: write
 
     steps:
@@ -28,8 +28,8 @@ jobs:
       - name: Upload dist to release
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+#           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: dist.zip
           asset_name: build.zip
-          tag: ${{ github.ref }}
+#           tag: ${{ github.ref }}
 
