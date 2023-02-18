@@ -23,7 +23,7 @@ jobs:
         run: npm run build
         
       - name: Compress the dist folder # shouldn't we add the zip to ubuntu?
-        run: zip -r dist.zip dist
+        run: zip -r dist.zip dist && ls -al
         
       - name: Upload dist to release
         uses: svenstaro/upload-release-action@v2
@@ -31,3 +31,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: dist.zip
           asset_name: build.zip
+          tag: ${{ github.ref }}
+
