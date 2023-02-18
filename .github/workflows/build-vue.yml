@@ -8,8 +8,8 @@ jobs:
   build:
     name: Publish Vue App
     runs-on: ubuntu-latest
-#     permissions:
-#       contents: read
+    permissions:
+      contents: write
 #       releases: write
 
     steps:
