@@ -6,19 +6,16 @@ on:
     
 jobs:
   build:
-    name: Build Vue App
+    name: Publish Vue App
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      # releases: write
+#     permissions:
+#       contents: read
+#       releases: write
 
     steps:
-      - name: Checkout the repo
-        uses: actions/checkout@v3
-        
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      
       - name: Install packages
         run: npm install
         
