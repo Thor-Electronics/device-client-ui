@@ -24,8 +24,9 @@ jobs:
         run: |
           ls embedded
           for file in embedded/*.html; do
-            npx html-minifier --input-dir embedded --output-dir embedded --file-ext html --output $file.min.html $file
+            cp $file ${file%.html}.min.html
           done
+          npx html-minifier --input-dir embedded --output-dir embedded --minify-css true --minify-js true
           ls embedded
         #run: npx html-minifier --input-dir embedded --output-dir embedded
 
