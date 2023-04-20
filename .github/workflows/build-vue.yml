@@ -29,4 +29,16 @@ jobs:
         with:
           file: dist.zip
           asset_name: build.zip
+        
+      - name: Upload embedded HTML(index) to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: embedded-dist/index.html
+          asset_name: index.html
+        
+      - name: Upload embedded HTML(quick) to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: embedded-dist/quick.html
+          asset_name: quick.html
 
