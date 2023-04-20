@@ -1,1 +1,10 @@
-{}
+{
+  "arrowParens": "avoid",
+  "semi": true,
+  "bracketSameLine": true,
+  "embeddedLanguageFormatting": "auto",
+  "jsxSingleQuote": false,
+  "trailingComma": "all",
+  "singleQuote": false,
+  "printWidth": 80
+}
