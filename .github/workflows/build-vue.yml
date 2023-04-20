@@ -33,12 +33,12 @@ jobs:
       - name: Upload embedded HTML(index) to release
         uses: svenstaro/upload-release-action@v2
         with:
-          file: embedded-dist/index.html
+          file: embedded-dist/index.min.html
           asset_name: index.html
         
       - name: Upload embedded HTML(quick) to release
         uses: svenstaro/upload-release-action@v2
         with:
-          file: embedded-dist/quick.html
+          file: embedded-dist/quick.min.html
           asset_name: quick.html
 
