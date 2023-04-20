@@ -34,4 +34,4 @@ jobs:
           author_name: GitHub Actions
           author_email: actions.github.com
           message: 'Minify embedded HTML files'
-          add: 'embedded/*.min.html'
+          add: 'embedded-dist/*.min.html'
