@@ -22,12 +22,10 @@ jobs:
 
       - name: Minify HTML files
         run: |
-          ls embedded
           for file in embedded/*.html; do
             cp $file ${file%.html}.min.html
           done
-          npx html-minifier --input-dir embedded --output-dir embedded --minify-css true --minify-js true --collapse-whitespace
-          ls embedded
+          npx html-minifier --input-dir embedded --output-dir embedded --minify-css true --minify-js true --collapse-whitespace --collapse-boolean-attributes --collapse-inline-tag-whitespace --remove-comments
         #run: npx html-minifier --input-dir embedded --output-dir embedded
 
       - name: Commit changes
