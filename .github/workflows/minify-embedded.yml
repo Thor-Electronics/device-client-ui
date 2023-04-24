@@ -23,9 +23,12 @@ jobs:
       - name: Minify HTML files
         run: |
           npx html-minifier --input-dir embedded --output-dir embedded-dist --minify-css true --minify-js true --collapse-whitespace --collapse-boolean-attributes --collapse-inline-tag-whitespace --remove-comments --file-ext html
+          ls -al embedded
           for file in embedded-dist/*.html; do
             mv $file ${file%.html}.min.html
           done
+          ls -al embedded
+          ls -al embedded-dist
         #run: npx html-minifier --input-dir embedded --output-dir embedded
 
       - name: Commit changes
